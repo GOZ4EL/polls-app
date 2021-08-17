@@ -65,7 +65,7 @@ class QuestionIndexViewTests(TestCase):
         """
         Questions that does not have choices aren't displayed on the index page.
         """
-        question = create_question(
+        create_question(
             question_text="Question without choices.", days=-30
         )
         response = self.client.get(reverse('polls:index'))
